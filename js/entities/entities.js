@@ -1,5 +1,20 @@
 game.PlayerEntity = me.Entity.extend({
     init: function(x, y, settings) {
+        this.setSuper();
+        this.setPlayerTimers();
+        this.setAttributte();
+        this.type = "PlayerEntity";
+        this.setFlags();
+        
+        me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
+        
+        this.addAnimation();
+       
+        this.renderable.setCurrentAnimation("idle");
+
+    },
+    
+    setSuper: function(){
         //loading player with 64*64 size
         this._super(me.Entity, 'init', [x, y, {
                 image: "player",
@@ -12,32 +27,55 @@ game.PlayerEntity = me.Entity.extend({
                 }
             }]);
 
-        this.type = "PlayerEntity";
-        this.health = game.data.playerHealth;
-        this.body.setVelocity(game.data.playerMoveSpeed, 20);
-        //Keeps track of which direction your character is going
-        this.facing = "right";
+    },
+    
+    setPlayerTimers: function(){
         this.now = new Date().getTime();
         this.lastHit = this.now;
-        this.dead = false;
-        this.attack = game.data.playerAttack;
         this.lastAttack = new Date().getTime(); //haven't used this
-        me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
-
+        
+    },
+    
+    setAttribute: function(){
+        this.health = game.data.playerHealth;
+        this.body.setVelocity(game.data.playerMoveSpeed, 20);      
+        this.attack = game.data.playerAttack;
+        
+    },
+    
+    setFlags: function(){
+        this.facing = "right";
+        //Keeps track of which direction your character is going
+        this.dead = false;
+        this.attacking = false;
+    },
+    
+    addAnimation: function(){
         this.renderable.addAnimation("idle", [78]);
         this.renderable.addAnimation("walk", [117, 118, 119, 120, 121, 122, 123, 124, 125], 80);
         this.renderable.addAnimation("attack", [65, 66, 67, 68, 69, 70, 71, 72], 80);
 
-        this.renderable.setCurrentAnimation("idle");
-
     },
+    
     update: function(delta) {
-        this.now = new Date().getTime();
-        
-        if(this.health <= 0){
-            this.dead = true;
-            }
-        
+        this.now = new Date().getTime();      
+        this.dead = checkIfDead();
+        this.checkKeyPressesAndMove();        
+        this.setAnimation();       
+        me.collision.check(this, true, this.collideHandler.bind(this), true);
+        this.body.update(delta);
+        this._super(me.Entity, "update", [delta]);
+        return true;
+    },
+    
+    checkIfDead: function() {
+      if(this.health <= 0){
+          return true;
+      }  
+    },
+    
+    checkKeyPressesAndMove: function(){
+      
         if (me.input.isKeyPressed("right")) {
             //adds to the position of my x by adding the velocity defined above in
             //setVelocity() and multiplying it by me.timer tick.
@@ -60,9 +98,13 @@ game.PlayerEntity = me.Entity.extend({
                 this.body.vel.y -= this.body.maxVel.y * me.timer.tick;
                 this.body.jumping = true;
             }
-        }
-
-        if (me.input.isKeyPressed("attack")) {
+        }  
+        
+        this.attacking = me.input.isKeyPressed("attack");
+    },
+    
+    setAnimation: function(){
+        if (this.attacking) {
             if (!this.renderable.isCurrentAnimation("attack")) {
                 //Sets the current animation to attack and once that is over
                 //goes back to the idle animation
@@ -82,12 +124,8 @@ game.PlayerEntity = me.Entity.extend({
             this.renderable.setCurrentAnimation("idle");
         }
 
-        me.collision.check(this, true, this.collideHandler.bind(this), true);
-        this.body.update(delta);
-
-        this._super(me.Entity, "update", [delta]);
-        return true;
     },
+    
     loseHealth: function(damage) {
         this.health = this.health - damage;
         console.log(this.health);
