@@ -6,7 +6,6 @@ game.PlayScreen = me.ScreenObject.extend({
 		// reset the score
 		game.data.score = 0;
                 me.levelDirector.loadLevel("level01");
-
                 this.resetPlayer(0, 420);
                 
                 var gameTimerManager = me.pool.pull("GameTimerManager", 0, 0, {});
@@ -14,6 +13,9 @@ game.PlayScreen = me.ScreenObject.extend({
                 
                 var heroDeathManager = me.pool.pull("heroDeathManager", 0, 0, {});
                 me.game.world.addChild(heroDeathManager, 0);
+                
+                var experienceManager = me.pool.pull("ExperienceManager", 0, 0, {});
+                me.game.world.addChild(experienceManager, 0);
                 
                 //setting up input keys for right, left, and jump
                 me.input.bindKey(me.input.KEY.RIGHT, "right");
