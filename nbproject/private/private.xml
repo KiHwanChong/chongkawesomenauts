@@ -5,12 +5,14 @@
         <group>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/entities.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/EnemyBaseEntity.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/data/img/orcSpear.png</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/resources.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/PlayerBaseEntity.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/resources.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/spendExp.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/play.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/title.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/GameManager.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/index.php</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/lib/melonJS-1.1.0.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/game.js</file>
         </group>
     </open-files>

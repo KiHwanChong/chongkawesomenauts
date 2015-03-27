@@ -18,6 +18,10 @@ game.PlayScreen = me.ScreenObject.extend({
                 me.game.world.addChild(experienceManager, 0);
                 
                 //setting up input keys for right, left, and jump
+                me.input.bindKey(me.input.KEY.B, "buy");
+                me.input.bindKey(me.input.KEY.Q, "skill1");
+                me.input.bindKey(me.input.KEY.W, "skill2");
+                me.input.bindKey(me.input.KEY.E, "skill3");
                 me.input.bindKey(me.input.KEY.RIGHT, "right");
                 me.input.bindKey(me.input.KEY.LEFT, "left");
                 me.input.bindKey(me.input.KEY.UP, "jump");
