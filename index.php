@@ -16,6 +16,23 @@
 		<!-- Canvas placeholder -->
 		<div id="screen"></div>
 
+                <form id="input" method="post">
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input type='text' name='username' id='username' autocomplete="off">
+                    </div>
+                    
+                    <div class='password'>
+                        <label for='password'>Passwords</label>    
+                        <input type='text' name='password' id='password'>                   
+                    </div>
+                    
+                    <button type='button' id='registers'>Register</button>
+                    <button type='button' id='load'>Load</button>
+                    <button type='button' id='mainmenu'>Main Menu</button>
+                </form>
+                    
+                    
 		<!-- melonJS Library -->
 		<!-- build:js js/app.min.js -->
 		<script type="text/javascript" src="lib/melonJS-1.1.0-min.js"></script>
@@ -29,7 +46,10 @@
                 
                 <script type="text/javascript" src="js/entities/EnemyBaseEntity.js"></script>
                 <script type="text/javascript" src="js/entities/EnemyCreep.js"></script>
-                <script type="text/javascript" src="js/entities/GameManager.js"></script>
+                <script type="text/javascript" src="js/gamemanagers/GameManager.js"></script>
+                <script type="text/javascript" src="js/gamemanagers/GameTimeManager.js"></script>
+                <script type="text/javascript" src="js/gamemanagers/SpendGold.js"></script>
+                <script type="text/javascript" src="js/gamemanagers/HeroDeathManager.js"></script>
                 <script type="text/javascript" src="js/entities/PlayerBaseEntity.js"></script>
 		<script type="text/javascript" src="js/entities/entities.js"></script>
 		<script type="text/javascript" src="js/entities/HUD.js"></script>
@@ -37,6 +57,8 @@
 		<script type="text/javascript" src="js/screens/title.js"></script>
 		<script type="text/javascript" src="js/screens/play.js"></script>
            	<script type="text/javascript" src="js/screens/spendExp.js"></script>
+                <script type="text/javascript" src="js/screens/newProfile.js"></script>
+           	<script type="text/javascript" src="js/screens/loadProfile.js"></script>
 
 		<!-- /build -->
 		<!-- Bootstrap & Mobile optimization tricks -->
