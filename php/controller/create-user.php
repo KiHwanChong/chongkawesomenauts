@@ -30,7 +30,7 @@
      //when only they don't match, insert the information into the list
      else {
           $query = $_SESSION["connection"]->query("INSERT INTO users SET "
-            . "email = '$email',"
+            . "email ='',"
             . "username = '$username',"
             . "password = '$hashedPassword',"
             . "salt = '$salt',"
