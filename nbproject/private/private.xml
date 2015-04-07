@@ -5,14 +5,18 @@
         <group>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/entities.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/resources.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/create-user.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/play.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/loadProfile.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/login.php</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/index.php</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/game.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/file_viewer.php</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/create-user.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/save-user.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/index.css</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/loadProfile.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/login-user.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/newProfile.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/index.php</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/create-db.php</file>
         </group>
     </open-files>
 </project-private>

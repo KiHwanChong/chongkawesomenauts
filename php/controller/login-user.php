@@ -1,7 +1,7 @@
 <?php
     require_once(__DIR__ . "/../model/config.php");
 
-    $arrat = array(
+    $array = array(
         'exp' => '',
         'exp1' => '',
         'exp2' => '',
@@ -26,7 +26,7 @@
             $array["exp1"] = $row["exp1"];
             $array["exp2"] = $row["exp2"];
             $array["exp3"] = $row["exp3"];
-            $array["exp4    "] = $row["exp4"];
+            $array["exp4"] = $row["exp4"];
             $_SESSION["name"] = $username;
                      
             
@@ -34,17 +34,10 @@
              
          }
          else {
-             echo "<p>Invalid username and password</p>";
+             echo "Invalid username and password";
          }
      }
      else {
-         echo "<p>Invalid username and password</p>";
+         echo "Invalid username and password";
      }
      
-     ?>
-<nav>
-    <ul>
-        <li><a href="<?php echo $path . "index.php" ?>">Go back to home</a></li>
-        <li><a href="<?php echo $path . "login.php" ?>">Try again</a></li>
-    </ul>
-</nav>

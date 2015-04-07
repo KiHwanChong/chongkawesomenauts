@@ -10,26 +10,8 @@
     
     //representing password and salt
     $hashedPassword = crypt($password, $salt);
-
-    //selecting username from the list
-    $checkU = $_SESSION["connection"]->query("SELECT username FROM users WHERE username = '$username'");
-     
-    //if there is one or more than one row selected, execute next line
-     if($checkU->num_rows >= 1) {
-         $row = $checkU->fetch_array();
-         
-         //if the input username and the username from the list are same, echo out already existing username
-        if($row["username"] == '$username') {
-             echo "<p>already existing username</p>";
-             
-         }
-         else {
-             echo "<p>already existing username</p>";
-         }
-     }
-     //when only they don't match, insert the information into the list
-     else {
-          $query = $_SESSION["connection"]->query("INSERT INTO users SET "
+    
+    $query = $_SESSION["connection"]->query("INSERT INTO users SET "
             . "email ='',"
             . "username = '$username',"
             . "password = '$hashedPassword',"
@@ -39,18 +21,14 @@
             . "exp2 = 0, "
             . "exp3 = 0, "
             . "exp4 = 0");
-          
-      $_SESSION["name"] = $username;
+    
+    $_SESSION["name"] = $username;
          
+
+    if($query){        
          //need this for Ajax on index.php 
          echo "true";
+     }else{
+         echo "<p>" . $_SESSION["connection"]->error . "</p>";
      }
-     ?>
-     
-<!--navigation to index page and register page to retry-->
-    <nav>
-    <ul>
-        <li><a href="<?php echo $path . "index.php" ?>">Go back to home</a></li>
-        <li><a href="<?php echo $path . "register.php" ?>">Try again</a></li>
-    </ul>
-    </nav>
+    
