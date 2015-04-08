@@ -116,10 +116,10 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     throwSpear: function(){
-        if(lastSpear >= game.data.spearTimer && game.data.ability3 >= 0){
-            this.lastCreep = this.now;
-            var spear = me.pool.pull("spear", this.pos.x, this.pos.y);
-            me.game.world.addChild(creepe, 5);
+        if((this.now - this.lastSpear) >= game.data.spearTimer*1000 && game.data.ability3 > 0){
+            this.lastSpear = this.now;
+            var spear = me.pool.pull("spear", this.pos.x, this.pos.y, {}, this.facing);
+            me.game.world.addChild(spear, 10);
         }
   
     },

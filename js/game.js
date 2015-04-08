@@ -6,6 +6,8 @@ var game = {
 	data : {
 		// score
 		score : 0,
+                option1: "",
+                option2: "",
                 enemyBaseHealth : 1,
                 playerBaseHealth : 1,
                 enemyCreepHealth: 1,
@@ -25,7 +27,7 @@ var game = {
                 player: "",
                 spearTimer: 15,
                 exp: 0,
-                gold: 0,
+                gold: 10,
                 ability1: 0,
                 ability2: 0,
                 ability3: 0,
