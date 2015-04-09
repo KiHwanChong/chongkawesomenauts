@@ -4,19 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/entities.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/login-verify.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/resources.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/EnemyCreep.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/spendExp.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/play.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/login.php</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/GameTimeManager.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/SpearThrow.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/index.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/game.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/file_viewer.php</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/spendExp.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/SpearThrow.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/logout-user.php</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/login-user.php</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/create-db.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/GameManager.js</file>
         </group>
     </open-files>

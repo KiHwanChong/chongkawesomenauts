@@ -31,7 +31,6 @@ class Database {
                 echo "<p>Successfully created database: " . $database . "</p>";
             }
         } else {
-            echo "<p>Database already exists.</p>";
         }
     }
 

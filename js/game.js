@@ -27,7 +27,7 @@ var game = {
                 player: "",
                 spearTimer: 15,
                 exp: 0,
-                gold: 10,
+                gold: 0,
                 ability1: 0,
                 ability2: 0,
                 ability3: 0,
@@ -41,7 +41,8 @@ var game = {
                 win: "",
                 pausePos: "",
                 buyscreen: "",
-                buytext: ""
+                buytext: "",
+                gameover: ""
 	},
 	
 	
