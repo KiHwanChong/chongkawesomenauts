@@ -44,6 +44,7 @@ var game = {
                 buytext: "",
                 gameover: "",
                 miniMap: "",
+                miniPlayer: "",
 	},
 	
 	
@@ -93,7 +94,8 @@ var game = {
                 me.pool.register("ExperienceManager", game.ExperienceManager);              
                 me.pool.register("SpendGold", game.SpendGold);              
                 me.pool.register("spear", game.SpearThrow);              
-                me.pool.register("minimap", game.MiniMap);
+                me.pool.register("minimap", game.MiniMap);            
+                me.pool.register("miniplayer", game.MiniPlayerLocation);
             
             
 		me.state.set(me.state.MENU, new game.TitleScreen());
