@@ -16,6 +16,7 @@ game.resources = [
          {name: "new-screen", type:"image", src: "data/img/newpic.png"},  
          {name: "spear", type:"image", src: "data/img/spear.png"},
          {name: "minimap", type:"image", src: "data/img/minimap.png"},
+         {name: "black-screen", type:"image", src: "data/img/blackBackground.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -26,12 +27,16 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
-        {name: "level01", type: "tmx", src: "data/map/test.tmx"}
+        {name: "level01", type: "tmx", src: "data/map/test.tmx"},
 
 	/* Background music. 
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/"},
 	 */	
+        {name: "play-bgm", type: "audio", src: "data/bgm/leagueBgm.mp3"},
+        {name: "menu-bgm", type: "audio", src: "data/bgm/menuBgm.mp3"},
+        {name: "jump-sound", type: "audio", src: "data/bgm/jump.mp3"},
+
 
 	/* Sound effects. 
 	 * @example

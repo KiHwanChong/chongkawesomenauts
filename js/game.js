@@ -45,6 +45,7 @@ var game = {
                 gameover: "",
                 miniMap: "",
                 miniPlayer: "",
+                pause:"",
 	},
 	
 	
@@ -96,6 +97,7 @@ var game = {
                 me.pool.register("spear", game.SpearThrow);              
                 me.pool.register("minimap", game.MiniMap);            
                 me.pool.register("miniplayer", game.MiniPlayerLocation);
+                me.pool.register("pause", game.Pause);
             
             
 		me.state.set(me.state.MENU, new game.TitleScreen());
