@@ -33,9 +33,9 @@ game.resources = [
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/"},
 	 */	
-        {name: "play-bgm", type: "audio", src: "data/bgm/leagueBgm.mp3"},
-        {name: "menu-bgm", type: "audio", src: "data/bgm/menuBgm.mp3"},
-        {name: "jump-sound", type: "audio", src: "data/bgm/jump.mp3"},
+        {name: "play-bgm", type: "audio", src: "data/bgm/"},
+        {name: "menu-bgm", type: "audio", src: "data/bgm/"},
+        {name: "jump-sound", type: "audio", src: "data/bgm/"},
 
 
 	/* Sound effects. 

@@ -11,10 +11,8 @@ game.PlayerEntity = me.Entity.extend({
         this.addAnimation();
        
         this.renderable.setCurrentAnimation("idle");
-
     },
-    
-    setSuper: function(x, y){
+    setSuper: function(x, y) {
         //loading player with 64*64 size
         this._super(me.Entity, 'init', [x, y, {
                 image: "player",
@@ -99,6 +97,8 @@ game.PlayerEntity = me.Entity.extend({
             if (!this.body.jumping && !this.body.falling) {
                 this.body.vel.y -= this.body.maxVel.y * me.timer.tick;
                 this.body.jumping = true;
+                // play some audio
+                me.audio.play("jump-sound");
             }
         }  
         

@@ -9,7 +9,7 @@ var game = {
                 option1: "",
                 option2: "",
                 enemyBaseHealth : 1,
-                playerBaseHealth : 1,
+                playerBaseHealth : 999,
                 enemyCreepHealth: 1,
                 playerHealth: 10,
                 enemyCreepAttack: 1,

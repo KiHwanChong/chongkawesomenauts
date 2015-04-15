@@ -2,7 +2,10 @@ game.LoadProfile = me.ScreenObject.extend({
         /**	
          *  action to perform on state change
          */
-        onResetEvent: function() {	
+        onResetEvent: function() {
+            // play the audio track
+            me.audio.playTrack("menu-bgm");
+ 
             me.game.world.addChild( new me.Sprite (0, 0, me.loader.getImage('load-screen')), -10); 
             game.data.gameover = false;
 
@@ -38,5 +41,6 @@ game.LoadProfile = me.ScreenObject.extend({
         onDestroyEvent: function() {
             document.getElementById("input").style.visibility = "hidden";
             document.getElementById("load").style.visibility = "hidden";
+            me.audio.stopTrack();
         }
 });
