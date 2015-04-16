@@ -33,7 +33,6 @@ game.EnemyCreep = me.Entity.extend({
     },
     
     update: function(delta) {
-        console.log(this.health);
         if(this.health <= 0){
             me.game.world.removeChild(this);
         }
@@ -64,7 +63,20 @@ game.EnemyCreep = me.Entity.extend({
                 response.b.loseHealth(game.data.enemyCreepAttack);
 
             }
-        } else if (response.b.type === 'PlayerEntity') {
+        } else if (response.b.type === 'PlayerCreep') {
+            this.attacking = true;
+            this.lastAttacking = this.now;
+            this.body.vel.x = 0;
+            //keeps moving the creep to the right to maintain its position
+            //checks that it has been at least 1 second since this creep hit a base
+            if ((this.now - this.lastHit >= 1000)) {
+                this.lastHit = this.now;
+                //makes the player base call its loseHealth function and passes it a
+                //damage of 1
+                response.b.loseHealth(game.data.enemyCreepAttack);
+
+            }
+        }else if (response.b.type === 'PlayerEntity') {
             var xdif = this.pos.x - response.b.pos.x;
 
             this.attacking = true;

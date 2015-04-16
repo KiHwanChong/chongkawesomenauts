@@ -3,32 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/MiniMap.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/model/config.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/resources.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/play.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/SpearThrow.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/logout-user.php</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/HUD.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/GameManager.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/entities.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/EnemyCreep.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/PlayerBaseEntity.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/title.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/loadProfile.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/data/img/miniMap.png</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/HeroDeathManager.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/play.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/GameTimeManager.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/index.php</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/SpendGold.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/Pause.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/game.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/EnemyBaseEntity.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/MiniPlayerLocation.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/spendExp.js</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/model/Database.php</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/php/controller/create-db.php</file>
-            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/newProfile.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/PlayerCreep.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/GameManager.js</file>
         </group>
     </open-files>
 </project-private>

@@ -11,8 +11,12 @@ var game = {
                 enemyBaseHealth : 1,
                 playerBaseHealth : 999,
                 enemyCreepHealth: 1,
+                enemyHeroHealth: 1,
+                playerCreepHealth: 1,
                 playerHealth: 10,
                 enemyCreepAttack: 1,
+                enemyHeroAttack: 1,
+                playerCreepAttack: 1,
                 playerAttack: 1,
                 orcBaseDamage: 10,
                 orcBaseHealth: 100,
@@ -20,8 +24,11 @@ var game = {
                 orcBaseDefense: 0,
                 playerAttackTimer: 1000,
                 enemyCreepAttackTimer: 1000,
+                enemyHeroAttackTimer: 1000,
+                playerCreepAttackTimer: 1000,
                 playerMoveSpeed: 5,
                 creepMoveSpeed: 5,
+                enemyMoveSpeed: 5,
                 gameTimerManager: "",
                 heroDeathManager: "",
                 player: "",
@@ -68,7 +75,6 @@ var game = {
         me.state.LOAD = 113;
         me.state.NEW = 114;
         
-        console.log(game.data.exp);
 
 	// Initialize the audio.
 	me.audio.init("mp3,ogg");
@@ -90,6 +96,7 @@ var game = {
                 me.pool.register("PlayerBase", game.PlayerBaseEntity);
                 me.pool.register("EnemyBase", game.EnemyBaseEntity);
                 me.pool.register("EnemyCreep", game.EnemyCreep, true);
+                me.pool.register("PlayerCreep", game.PlayerCreep, true);
                 me.pool.register("GameTimerManager", game.GameTimerManager);                
                 me.pool.register("HeroDeathManager", game.HeroDeathManager);                
                 me.pool.register("ExperienceManager", game.ExperienceManager);              
@@ -98,6 +105,7 @@ var game = {
                 me.pool.register("minimap", game.MiniMap);            
                 me.pool.register("miniplayer", game.MiniPlayerLocation);
                 me.pool.register("pause", game.Pause);
+                me.pool.register("EnemyEntity", game.EnemyEntity);
             
             
 		me.state.set(me.state.MENU, new game.TitleScreen());
