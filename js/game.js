@@ -105,7 +105,7 @@ var game = {
                 me.pool.register("minimap", game.MiniMap);            
                 me.pool.register("miniplayer", game.MiniPlayerLocation);
                 me.pool.register("pause", game.Pause);
-                me.pool.register("EnemyEntity", game.EnemyEntity);
+                me.pool.register("EnemyEntity", game.EnemyEntity, true);
             
             
 		me.state.set(me.state.MENU, new game.TitleScreen());

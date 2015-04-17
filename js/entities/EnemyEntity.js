@@ -1,13 +1,13 @@
 game.EnemyEntity = me.Entity.extend({
     init: function(x, y, settings) {
         this._super(me.Entity, 'init', [x, y, {
-                image: "creep1",
-                width: 32,
+                image: "enemyHero",
+                width: 64,
                 height: 64,
-                spritewidth: "32",
+                spritewidth: "64",
                 spriteheight: "64",
                 getShape: function() {
-                    return(new me.Rect(0, 0, 32, 64)).toPolygon();
+                    return(new me.Rect(0, 0, 64, 64)).toPolygon();
                 }
             }]);
         this.health = game.data.enemyHeroHealth;
@@ -19,11 +19,11 @@ game.EnemyEntity = me.Entity.extend({
         //keeps track of the last time our creep hit anything
         this.lastHit = new Date().getTime();
         this.now = new Date().getTime();
-        this.body.setVelocity(3, 20);
+        this.body.setVelocity(4, 20);
 
         this.type = "EnemyEntity";
 
-        this.renderable.addAnimation("walk", [3, 4, 5], 80);
+        this.renderable.addAnimation("walk", [117, 118, 119, 120, 121, 122, 123, 124, 125], 80);
         this.renderable.setCurrentAnimation("walk");
 
     },

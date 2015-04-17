@@ -29,6 +29,8 @@ game.GameTimerManager = Object.extend({
             me.game.world.addChild(creepe, 5);
             var creepf = me.pool.pull("PlayerCreep", 0, 0, {});
             me.game.world.addChild(creepf, 5);
+            var creepg = me.pool.pull("EnemyEntity", 1100, 0, {});
+            me.game.world.addChild(creepg, 5);
         }
     }
 });
