@@ -33,7 +33,7 @@ game.SpearThrow = me.Entity.extend({
         return true;
     },
     collideHandler: function(response) {
-        if (response.b.type === 'EnemyBase' || response.b.type === 'EnemyCreep') {
+        if (response.b.type === 'EnemyBaseEntity' || response.b.type === 'EnemyCreep' || response.b.type === 'EnemyEntity') {
             response.b.loseHealth(this.attack);
             me.game.world.removeChild(this);
         }

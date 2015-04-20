@@ -158,6 +158,8 @@ game.PlayerEntity = me.Entity.extend({
             
         }else if(response.b.type==='EnemyCreep'){
          this.collideWithEnemyCreep(response);
+        }else if(response.b.type==='EnemyEntity'){
+         this.collideWithEnemyEntity(response);
         }
     },
     
@@ -184,6 +186,19 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     collideWithEnemyCreep: function(response){
+            var ydif = this.pos.y - response.b.pos.y;
+            var xdif = this.pos.x - response.b.pos.x;
+            
+            this.stopMovement(xdif);
+            
+            if (this.checkAttack(xdif, ydif)) {
+             this.hitCreep(response);
+
+        };  
+    },
+    
+    
+    collideWithEnemyEntity: function(response){
             var ydif = this.pos.y - response.b.pos.y;
             var xdif = this.pos.x - response.b.pos.x;
             
