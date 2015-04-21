@@ -12,6 +12,7 @@ game.EnemyCreep = me.Entity.extend({
             }]);
         this.health = game.data.enemyCreepHealth;
         this.alwaysUpdate = true;
+        this.jumping = false;
         //this.attacking lets us know if the enemy is currently attacking
         this.attacking = false;
         //keeps track of when our creep last attacked anything
@@ -95,6 +96,10 @@ game.EnemyCreep = me.Entity.extend({
 
             }
         }
+        if (response.b.type === 'Jump') {
+            this.body.vel.y -= this.body.maxVel.y * me.timer.tick;
+            this.body.jumping = true;
+            }
     }
 
 });

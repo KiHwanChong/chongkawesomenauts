@@ -26,7 +26,7 @@ var game = {
                 enemyCreepAttackTimer: 1000,
                 enemyHeroAttackTimer: 1000,
                 playerCreepAttackTimer: 1000,
-                playerMoveSpeed: 5,
+                playerMoveSpeed: 30,
                 creepMoveSpeed: 5,
                 enemyMoveSpeed: 5,
                 gameTimerManager: "",
@@ -53,6 +53,7 @@ var game = {
                 miniMap: "",
                 miniPlayer: "",
                 pause:"",
+                jump:"",
 	},
 	
 	
@@ -106,6 +107,7 @@ var game = {
                 me.pool.register("miniplayer", game.MiniPlayerLocation);
                 me.pool.register("pause", game.Pause);
                 me.pool.register("EnemyEntity", game.EnemyEntity, true);
+                me.pool.register("Jump", game.Jump, true);
             
             
 		me.state.set(me.state.MENU, new game.TitleScreen());

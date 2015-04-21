@@ -95,6 +95,7 @@ game.EnemyEntity = me.Entity.extend({
 
             }
         }
+        
     }
 
 });
