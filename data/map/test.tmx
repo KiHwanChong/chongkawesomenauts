@@ -42,7 +42,22 @@
     <property name="EnemyBase" value=""/>
    </properties>
   </object>
-  <object name="Jump" x="4038" y="490" width="38" height="68">
+  <object name="Jump" x="3988" y="492" width="74" height="69">
+   <properties>
+    <property name="Jump" value=""/>
+   </properties>
+  </object>
+  <object name="Jump" x="3847" y="490.5" width="74" height="69">
+   <properties>
+    <property name="Jump" value=""/>
+   </properties>
+  </object>
+  <object name="Jump" x="417" y="492.5" width="74" height="69">
+   <properties>
+    <property name="Jump" value=""/>
+   </properties>
+  </object>
+  <object name="Jump" x="558" y="490.5" width="74" height="69">
    <properties>
     <property name="Jump" value=""/>
    </properties>

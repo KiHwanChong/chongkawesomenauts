@@ -31,6 +31,7 @@ game.PlayerEntity = me.Entity.extend({
         this.now = new Date().getTime();
         this.lastHit = this.now;
         this.lastSpear = this.now;
+        this.lastSpeed = this.now;
         this.lastAttack = new Date().getTime(); //haven't used this
         
     },
@@ -107,11 +108,20 @@ game.PlayerEntity = me.Entity.extend({
     
     checkAbilityKeys: function(){
         if(me.input.isKeyPressed("skill1")){
-            //this.speedBurst();
+            this.speedBurst();
         }else if(me.input.isKeyPressed("skill2")){
             //this.eatCreep();
         }else if(me.input.isKeyPressed("skill3")){
             this.throwSpear();
+        }
+    },
+    speedBurst: function() {
+        if ((this.now - this.lastSpeed) >= (game.data.spearTimer * 100) && game.data.ability1 > 0) {
+            this.lastSpeed = this.now;
+            this.body.setVelocity(12, 20);
+            if((this.now - this.lastSpeed) <= 2000){
+                this.body.setVelocity(game.data.playerMoveSpeed, 20);
+            }
         }
     },
     

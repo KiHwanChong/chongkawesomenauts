@@ -95,7 +95,10 @@ game.EnemyEntity = me.Entity.extend({
 
             }
         }
-        
+        if (response.b.type === 'Jump') {
+            this.body.vel.y -= this.body.maxVel.y * me.timer.tick;
+            this.body.jumping = true;
+            }
     }
 
 });

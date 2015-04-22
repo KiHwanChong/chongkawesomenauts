@@ -19,6 +19,7 @@ game.resources = [
          {name: "minimap", type:"image", src: "data/img/minimap.png"},
          {name: "black-screen", type:"image", src: "data/img/blackBackground.png"},
          {name: "enemyHero", type:"image", src: "data/img/elf.png"},
+         {name: "jump", type:"image", src: "data/img/jump.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},

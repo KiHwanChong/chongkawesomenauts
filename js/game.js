@@ -26,7 +26,7 @@ var game = {
                 enemyCreepAttackTimer: 1000,
                 enemyHeroAttackTimer: 1000,
                 playerCreepAttackTimer: 1000,
-                playerMoveSpeed: 30,
+                playerMoveSpeed: 6,
                 creepMoveSpeed: 5,
                 enemyMoveSpeed: 5,
                 gameTimerManager: "",
