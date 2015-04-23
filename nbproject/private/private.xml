@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/entities.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/MiniMap.js</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/data/img/jump.PNG</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/resources.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/EnemyCreep.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/PlayerBaseEntity.js</file>
@@ -13,6 +14,7 @@
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/entities/Jump.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/screens/title.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/data/img/miniMap.png</file>
+            <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/HeroDeathManager.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/gamemanagers/GameTimeManager.js</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/index.php</file>
             <file>file:/C:/xampp/htdocs/ChongkAwesomenauts/js/game.js</file>
