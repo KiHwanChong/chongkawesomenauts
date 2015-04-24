@@ -116,14 +116,15 @@ game.PlayerEntity = me.Entity.extend({
             this.superfast = true;
             this.lastSpeed = this.now;
             this.body.setVelocity(12, 20);
-        } 
+        }
     },
-    
     eatCreep: function(response) {
-        if ((this.now - this.lastEat) >= (game.data.spearTimer * 50) && game.data.ability2 > 0) {
-            this.lastEat = this.now;           
-            response.b.loseHealth(20);
-            this.health = this.health + 3;
+        if ((this.now - this.lastEat) >= (game.data.spearTimer * 10) && game.data.ability2 > 0) {
+            this.lastEat = this.now;
+            if (me.input.isKeyPressed("skill2")) {
+                response.b.loseHealth(20);
+                this.health = this.health + 3;
+            }
 
         }
 
@@ -169,7 +170,7 @@ game.PlayerEntity = me.Entity.extend({
             this.collideWithEnemyCreep(response);
         } else if (response.b.type === 'EnemyEntity') {
             this.collideWithEnemyEntity(response);
-        } else if (response.b.type === 'PlayerCreep' || me.input.isKeyPressed("skill2")) {
+        } else if (response.b.type === 'PlayerCreep') {
             this.eatCreep(response);
         }
     },

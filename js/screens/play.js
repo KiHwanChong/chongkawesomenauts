@@ -32,6 +32,7 @@ game.PlayScreen = me.ScreenObject.extend({
 
         //setting up input keys for right, left, and jump
         me.input.bindKey(me.input.KEY.B, "buy");
+        me.input.bindKey(me.input.KEY.M, "minimap");
         me.input.bindKey(me.input.KEY.Q, "skill1");
         me.input.bindKey(me.input.KEY.W, "skill2");
         me.input.bindKey(me.input.KEY.E, "skill3");
