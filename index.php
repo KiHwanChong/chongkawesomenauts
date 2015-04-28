@@ -55,6 +55,7 @@
                 <script type="text/javascript" src="js/entities/PlayerCreep.js"></script>
                 <script type="text/javascript" src="js/gamemanagers/GameManager.js"></script>
                 <script type="text/javascript" src="js/gamemanagers/GameTimeManager.js"></script>
+                <script type="text/javascript" src="js/gamemanagers/GameMinimapManager.js"></script>
                 <script type="text/javascript" src="js/gamemanagers/SpendGold.js"></script>
                 <script type="text/javascript" src="js/gamemanagers/Pause.js"></script>
                 <script type="text/javascript" src="js/gamemanagers/HeroDeathManager.js"></script>
