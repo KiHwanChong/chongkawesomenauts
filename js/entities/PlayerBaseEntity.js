@@ -1,4 +1,5 @@
 game.PlayerBaseEntity = me.Entity.extend({
+    //basically same thing with enemy base entity
     init: function(x, y, settings) {
         this._super(me.Entity, 'init', [x, y, {
                 image: "tower",

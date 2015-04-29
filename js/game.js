@@ -5,17 +5,18 @@ var game = {
 	// an object where to store game information
 	data : {
 		// score
+                //set global variables
 		score : 0,
                 option1: "",
                 option2: "",
-                enemyBaseHealth : 999,
-                playerBaseHealth : 999,
-                enemyCreepHealth: 1,
-                enemyHeroHealth: 1,
-                playerCreepHealth: 1,
+                enemyBaseHealth : 15,
+                playerBaseHealth : 15,
+                enemyCreepHealth: 5,
+                enemyHeroHealth: 10,
+                playerCreepHealth: 5,
                 playerHealth: 10,
                 enemyCreepAttack: 1,
-                enemyHeroAttack: 1,
+                enemyHeroAttack: 2,
                 playerCreepAttack: 1,
                 playerAttack: 1,
                 orcBaseDamage: 10,
@@ -28,7 +29,7 @@ var game = {
                 playerCreepAttackTimer: 1000,
                 playerMoveSpeed: 6,
                 creepMoveSpeed: 5,
-                enemyMoveSpeed: 5,
+                enemyMoveSpeed: 6,
                 gameTimerManager: "",
                 heroDeathManager: "",
                 player: "",

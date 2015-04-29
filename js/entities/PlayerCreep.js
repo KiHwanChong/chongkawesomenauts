@@ -1,4 +1,5 @@
 game.PlayerCreep = me.Entity.extend({
+    //same thing with enemy creep
     init: function(x, y, settings) {
         this._super(me.Entity, 'init', [x, y, {
                 image: "creep2",
@@ -79,22 +80,18 @@ game.PlayerCreep = me.Entity.extend({
 
             }
         } else if (response.b.type === 'EnemyEntity') {
-            var xdif = this.pos.x - response.b.pos.x;
-
             this.attacking = true;
             this.lastAttacking = this.now;
-            if (xdif > 0) {
-                //keeps moving the creep to the right to maintain its position           
-                this.body.vel.x = 0;
-            
-            }
+            this.body.vel.x = 0;
+            //keeps moving the creep to the right to maintain its position
             //checks that it has been at least 1 second since this creep hit a base
-            if ((this.now - this.lastHit >= 1000) && xdif > 0) {
+            if ((this.now - this.lastHit >= 1000)) {
                 this.lastHit = this.now;
-                //makes the player call its loseHealth function and passes it a
+                //makes the player base call its loseHealth function and passes it a
                 //damage of 1
-                response.b.loseHealth(game.data.playerCreepAttack);
+                response.b.loseHealth(game.data.enemyCreepAttack);
 
+            
             }
         }
         if (response.b.type === 'Jump') {

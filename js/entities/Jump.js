@@ -1,4 +1,6 @@
 game.Jump = me.Entity.extend({
+    //making a jump entity, which lets creeps jump over it.
+    //i made this jump entity with the same image of the yellow box, so it seems they just jump over it, without colliding with anything.
     init: function(x, y, settings) {
         this._super(me.Entity, 'init', [x, y, {
                 image: "jump",

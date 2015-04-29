@@ -10,7 +10,6 @@ game.SpendGold = Object.extend({
     
     update: function(){
         this.now = new Date().getTime();
-        
         if(me.input.isKeyPressed("buy") && this.now-this.lastBuy >=1000){
             this.lastBuy = this.now;
             if(!this.buying){
@@ -26,6 +25,7 @@ game.SpendGold = Object.extend({
     },
     
     startBuying: function() {
+        //when buying is true, show up the buy-screen
         this.buying = true;
         me.state.pause(me.state.PLAY);
         game.data.pausePos = me.game.viewport.localToWorld(0, 0);
@@ -72,6 +72,7 @@ game.SpendGold = Object.extend({
     },
     
     stopBuying: function() {
+        //when buying is done, stop all things preceded in the buy-screen
         this.buying = false;
         me.state.resume(me.state.PLAY);
         game.data.player.body.setVelocity(game.data.playerMoveSpeed, 20);

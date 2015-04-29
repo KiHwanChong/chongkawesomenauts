@@ -1,6 +1,8 @@
 game.MiniPlayerLocation = me.Entity.extend({
+    //drawing miniplayer
     init: function(x, y, settings) {
         this.settings = settings;
+        //radius is 5... drawing a blue circle
         this.r = 5;
         this.diameter = (this.r + 2) * 2;
         this.anchorPoint = new me.Vector2d(0, 0);
@@ -42,6 +44,7 @@ game.MiniPlayerLocation = me.Entity.extend({
                 );
     },
     
+    //the multiplyer depends on your minimap. if it's 15%, the multiplyer should be 0.15
     update: function() {
         this.pos.x = (10+(game.data.player.pos.x *0.15));
         this.pos.y = (10+(game.data.player.pos.y *0.15));

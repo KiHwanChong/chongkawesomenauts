@@ -96,6 +96,7 @@ game.EnemyCreep = me.Entity.extend({
 
             }
         }
+        //if creep collides with jump entitty, it jumps. (Creep's AI)
         if (response.b.type === 'Jump') {
             this.body.vel.y -= this.body.maxVel.y * me.timer.tick;
             this.body.jumping = true;

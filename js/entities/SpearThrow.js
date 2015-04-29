@@ -18,6 +18,7 @@ game.SpearThrow = me.Entity.extend({
 
     },
     update: function(delta) {
+        //throw the spear, depending on the player's direction
         if (this.facing === "left") {
             this.body.vel.x -= this.body.accel.x * me.timer.tick;
         } else {
@@ -32,9 +33,11 @@ game.SpearThrow = me.Entity.extend({
         this._super(me.Entity, "update", [delta]);
         return true;
     },
+    
     collideHandler: function(response) {
+        //if the spear collides with enemy base, creep, or entity, it attacks and damages its health
         if (response.b.type === 'EnemyBaseEntity' || response.b.type === 'EnemyCreep' || response.b.type === 'EnemyEntity') {
-            response.b.loseHealth(this.attack);
+            response.b.loseHealth(2);
             me.game.world.removeChild(this);
         }
     }

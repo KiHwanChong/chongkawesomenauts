@@ -1,11 +1,10 @@
-
-
 game.ExperienceManager = Object.extend({
     init: function(x, y, settings) {
         this.alwaysUpdate = true;
         this.gameover = false;
     },
     update: function() {
+        //you lose or win with alert messages
         if (game.data.win === true && !game.data.gameover) {
             this.gameOver(true);
             alert("YOU WIN!");
@@ -26,7 +25,7 @@ game.ExperienceManager = Object.extend({
         game.data.gameover = true;
         me.save.exp = game.data.exp;
 
-
+            //save exp data into php
             $.ajax({
                 type: "POST",
                 url: "php/controller/save-user.php",

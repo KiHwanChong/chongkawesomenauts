@@ -64,14 +64,19 @@ game.EnemyEntity = me.Entity.extend({
 
             }
         } else if (response.b.type === 'PlayerCreep') {
+            var xdif = this.pos.x - response.b.pos.x;
+
             this.attacking = true;
             this.lastAttacking = this.now;
-            this.body.vel.x = 0;
-            //keeps moving the creep to the right to maintain its position
+            if (xdif > 0) {
+                //keeps moving the creep to the right to maintain its position           
+                this.body.vel.x = 0;
+            
+            }
             //checks that it has been at least 1 second since this creep hit a base
-            if ((this.now - this.lastHit >= 1000)) {
+            if ((this.now - this.lastHit >= 1000) && xdif > 0) {
                 this.lastHit = this.now;
-                //makes the player base call its loseHealth function and passes it a
+                //makes the player call its loseHealth function and passes it a
                 //damage of 1
                 response.b.loseHealth(game.data.enemyHeroAttack);
 

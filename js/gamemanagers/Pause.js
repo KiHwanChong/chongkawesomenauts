@@ -1,4 +1,6 @@
 game.Pause = Object.extend({
+    //basically same codes with SpendGold screen.
+    //I only changed text and the binding keys
     init: function(x, y, settings){
         this.now = new Date().getTime();
         this.lastPause = new Date().getTime();

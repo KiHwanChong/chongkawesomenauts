@@ -5,13 +5,14 @@ game.PlayerEntity = me.Entity.extend({
         this.setAttribute();
         this.type = "PlayerEntity";
         this.setFlags();
-
+//fixing the camera on the player
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
 
         this.addAnimation();
 
         this.renderable.setCurrentAnimation("idle");
     },
+    
     setSuper: function(x, y) {
         //loading player with 64*64 size
         this._super(me.Entity, 'init', [x, y, {
@@ -171,6 +172,7 @@ game.PlayerEntity = me.Entity.extend({
         } else if (response.b.type === 'EnemyEntity') {
             this.collideWithEnemyEntity(response);
         } else if (response.b.type === 'PlayerCreep') {
+            //checking if the player collides with creep, enabling the player to eat the creep
             this.eatCreep(response);
         }
     },
@@ -178,17 +180,19 @@ game.PlayerEntity = me.Entity.extend({
         var ydif = this.pos.y - response.b.pos.y;
         var xdif = this.pos.x - response.b.pos.x;
 
+        //standing on the enemy base
         if (ydif < -40 && xdif < 70 && xdif > -35) {
             this.body.falling = false;
             this.body.vel.y = -1;
         }
+        //can't go through the base in either way
         else if (xdif > -35 && this.facing === 'right' && (xdif < 0)) {
             this.body.vel.x = 0;
 
         } else if (xdif < 70 && this.facing === 'left' && (xdif > 0)) {
             this.body.vel.x = 0;
         }
-
+        //timer will prevent the player from attacking infinitely
         if (this.renderable.isCurrentAnimation("attack") && this.now - this.lastHit >= game.data.playerAttackTimer)
         {
             this.lastHit = this.now;
@@ -198,7 +202,7 @@ game.PlayerEntity = me.Entity.extend({
     collideWithEnemyCreep: function(response) {
         var ydif = this.pos.y - response.b.pos.y;
         var xdif = this.pos.x - response.b.pos.x;
-
+        //the player stops when collided by enemy creep
         this.stopMovement(xdif);
 
         if (this.checkAttack(xdif, ydif)) {
@@ -208,6 +212,7 @@ game.PlayerEntity = me.Entity.extend({
         ;
     },
     collideWithEnemyEntity: function(response) {
+        //same thing with the enemy creep
         var ydif = this.pos.y - response.b.pos.y;
         var xdif = this.pos.x - response.b.pos.x;
 
@@ -233,6 +238,7 @@ game.PlayerEntity = me.Entity.extend({
         }
     },
     checkAttack: function(xdif, ydif) {
+        //set timer for not attacking infinitely
         if (this.renderable.isCurrentAnimation("attack") && this.now - this.lastHit >= game.data.playerAttackTimer
                 && (Math.abs(ydif) <= 40) &&
                 (((xdif > 0) && this.facing === "left") || ((xdif < 0) && this.facing === "right"))

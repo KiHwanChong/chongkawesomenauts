@@ -16,11 +16,13 @@ game.EnemyBaseEntity = me.Entity.extend({
         this.body.onCollision = this.onCollision.bind(this);
         this.type = "EnemyBaseEntity";
 
+//set animation
         this.renderable.addAnimation("idle", [0]);
         this.renderable.addAnimation("broken", [1]);
         this.renderable.setCurrentAnimation("idle");
     },
     update: function(delta) {
+        //Enemy base's health goes below 0, then you win the game and display broken base animation
         if (this.health <= 0) {
             this.broken = true;
             game.data.win = true;
