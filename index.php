@@ -102,6 +102,7 @@
 			});
 		</script>
                 <script>
+                    //Exp datas would be saved through ajax
                 $("#mainmenu").bind("click", function(){
                    me.state.change(me.state.MENU); 
                 });
